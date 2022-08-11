@@ -13,6 +13,7 @@
 		3CA19B0628A42CEE0004A967 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CA19B0528A42CEE0004A967 /* Preview Assets.xcassets */; };
 		3CA19B0F28A431A10004A967 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA19B0E28A431A10004A967 /* RecipeModel.swift */; };
 		3CA19B1128A4333B0004A967 /* RecipeRessources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA19B1028A4333B0004A967 /* RecipeRessources.swift */; };
+		3CA19B1C28A4F1D80004A967 /* RecipesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA19B1B28A4F1D80004A967 /* RecipesListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		3CA19B0528A42CEE0004A967 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3CA19B0E28A431A10004A967 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		3CA19B1028A4333B0004A967 /* RecipeRessources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRessources.swift; sourceTree = "<group>"; };
+		3CA19B1B28A4F1D80004A967 /* RecipesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				3CA19B0028A42CED0004A967 /* ContentView.swift */,
 				3CA19B0E28A431A10004A967 /* RecipeModel.swift */,
 				3CA19B1028A4333B0004A967 /* RecipeRessources.swift */,
+				3CA19B1D28A4F1DC0004A967 /* View */,
 				3CA19B0228A42CEE0004A967 /* Assets.xcassets */,
 				3CA19B0428A42CEE0004A967 /* Preview Content */,
 			);
@@ -71,6 +74,14 @@
 				3CA19B0528A42CEE0004A967 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3CA19B1D28A4F1DC0004A967 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3CA19B1B28A4F1D80004A967 /* RecipesListView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +156,7 @@
 			files = (
 				3CA19B0128A42CED0004A967 /* ContentView.swift in Sources */,
 				3CA19AFF28A42CED0004A967 /* MaghrebRecipesApp.swift in Sources */,
+				3CA19B1C28A4F1D80004A967 /* RecipesListView.swift in Sources */,
 				3CA19B0F28A431A10004A967 /* RecipeModel.swift in Sources */,
 				3CA19B1128A4333B0004A967 /* RecipeRessources.swift in Sources */,
 			);

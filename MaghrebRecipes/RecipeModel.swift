@@ -20,7 +20,7 @@ struct RecipeModel: Identifiable {
 
 }
 
-enum RecipeType: String {
+enum RecipeType: String, CaseIterable {
 	case entry = "Entrée"
 	case dish = "Plat"
 	case dessert = "Dessert"
