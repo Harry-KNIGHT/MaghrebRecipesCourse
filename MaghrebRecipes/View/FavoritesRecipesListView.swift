@@ -15,9 +15,9 @@ struct FavoritesRecipesListView: View {
 				EmptyView()
 			}else {
 				List {
-					ForEach(favoritesVM.favorites, id: \.self) { favori in
+					ForEach(favoritesVM.favorites) { favori in
 						NavigationLink(destination: RecipeDetailView(recipe: favori)) {
-							ListRowCellView(recipeImage: favori.image, recipeName: favori.name, recipeDescription: favori.description)
+							ListRowCellView(recipeImage: favori.image, formImage: nil, recipeName: favori.name, recipeDescription: favori.description)
 						}
 					}
 					.onDelete(perform: favoritesVM.deletFavorite)

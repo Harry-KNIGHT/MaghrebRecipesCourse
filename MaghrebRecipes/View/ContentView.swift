@@ -15,6 +15,10 @@ struct ContentView: View {
 					Label("Recipes", systemImage: "list.bullet.circle.fill")
 				}
 
+			RecipeFormView()
+				.tabItem {
+					Label("Creations", systemImage: "book.closed.circle.fill")
+			}
 			FavoritesRecipesListView()
 				.tabItem {
 					Label("Favorites", systemImage: "heart.circle.fill")

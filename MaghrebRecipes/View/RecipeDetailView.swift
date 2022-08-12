@@ -13,12 +13,22 @@ struct RecipeDetailView: View {
     var body: some View {
 		List {
 			VStack {
-			Image(recipe.image)
-				.resizable()
-				.scaledToFit()
-				.frame(maxWidth: 350)
-				.clipShape(RoundedRectangle(cornerRadius: 20))
-
+				if let recipe = recipe.image {
+					Image(recipe)
+						.resizable()
+						.scaledToFit()
+						.frame(maxWidth: 350)
+						.clipShape(RoundedRectangle(cornerRadius: 20))
+				} else {
+					ZStack {
+						RoundedRectangle(cornerRadius: 10)
+							.foregroundColor(.secondary)
+							.frame(maxHeight: 350)
+						Text("Maghreb Recipes")
+							.font(.title3.bold())
+							.foregroundStyle(.secondary)
+					}
+				}
 				HStack {
 					Text(recipe.name)
 						.font(.title3.bold())
