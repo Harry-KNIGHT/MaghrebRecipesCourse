@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct MaghrebRecipesApp: App {
+	@StateObject public var favoriteVM = FavoriteViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+				.environmentObject(favoriteVM)
         }
     }
 }

@@ -9,7 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        RecipesListView()
+		TabView {
+			RecipesListView()
+				.tabItem {
+					Label("Recipes", systemImage: "list.bullet.circle.fill")
+				}
+
+			FavoritesRecipesListView()
+				.tabItem {
+					Label("Favorites", systemImage: "heart.circle.fill")
+				}
+		}
     }
 }
 
