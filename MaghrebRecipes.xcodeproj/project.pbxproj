@@ -14,6 +14,7 @@
 		3CA19B0F28A431A10004A967 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA19B0E28A431A10004A967 /* RecipeModel.swift */; };
 		3CA19B1128A4333B0004A967 /* RecipeRessources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA19B1028A4333B0004A967 /* RecipeRessources.swift */; };
 		3CA19B1C28A4F1D80004A967 /* RecipesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA19B1B28A4F1D80004A967 /* RecipesListView.swift */; };
+		3CA19B2328A4F7B30004A967 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA19B2228A4F7B30004A967 /* RecipeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		3CA19B0E28A431A10004A967 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		3CA19B1028A4333B0004A967 /* RecipeRessources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRessources.swift; sourceTree = "<group>"; };
 		3CA19B1B28A4F1D80004A967 /* RecipesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListView.swift; sourceTree = "<group>"; };
+		3CA19B2228A4F7B30004A967 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				3CA19B1B28A4F1D80004A967 /* RecipesListView.swift */,
+				3CA19B2228A4F7B30004A967 /* RecipeDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CA19B0128A42CED0004A967 /* ContentView.swift in Sources */,
+				3CA19B2328A4F7B30004A967 /* RecipeDetailView.swift in Sources */,
 				3CA19AFF28A42CED0004A967 /* MaghrebRecipesApp.swift in Sources */,
 				3CA19B1C28A4F1D80004A967 /* RecipesListView.swift in Sources */,
 				3CA19B0F28A431A10004A967 /* RecipeModel.swift in Sources */,

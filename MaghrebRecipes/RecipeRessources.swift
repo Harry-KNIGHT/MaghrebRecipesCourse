@@ -32,6 +32,7 @@ var recipes: [RecipeModel] = [
 	RecipeModel(image: "gazelle", name: "Corne de gazelle", recipeType: .dessert, timeToCook: 13, averagePrice: .medium, difficulty: .hard, ingredients: ["Fleur d'oranger", "Farine"], description: "La corne de gazelle est une pâtisserie du Maroc en forme de petits croissants dont le cœur moelleux contient de la pâte d'amande, de la canelle et de l'eau de fleur d'oranger.")
 ]
 
+
 extension RecipeModel {
-	static var recipe = RecipeModel(image: "gazelle", name: "Corne de gazelle", recipeType: .dessert, timeToCook: 13, averagePrice: .medium, difficulty: .hard, ingredients: ["Fleur d'oranger", "Farine"], description: "La corne de gazelle est une pâtisserie du Maroc en forme de petits croissants dont le cœur moelleux contient de la pâte d'amande, de la canelle et de l'eau de fleur d'oranger.")
+	static var recipeSample = RecipeModel(image: "gazelle", name: "Corne de gazelle", recipeType: .dessert, timeToCook: 13, averagePrice: .medium, difficulty: .hard, ingredients: ["Fleur d'oranger", "Farine"], description: "La corne de gazelle est une pâtisserie du Maroc en forme de petits croissants dont le cœur moelleux contient de la pâte d'amande, de la canelle et de l'eau de fleur d'oranger.")
 }

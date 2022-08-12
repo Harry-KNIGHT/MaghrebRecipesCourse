@@ -14,7 +14,7 @@ struct RecipesListView: View {
 				ForEach(RecipeType.allCases, id: \.self) { section in
 					Section(header: Text(section.rawValue)) {
 						ForEach(recipes.filter({ $0.recipeType == section })) { recipe in
-							NavigationLink(destination: Text("ceci est une recette")) {
+							NavigationLink(destination: RecipeDetailView(recipe: recipe)) {
 								HStack(alignment: .center) {
 									Image(recipe.image)
 										.resizable()
