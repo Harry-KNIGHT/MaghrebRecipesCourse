@@ -13,13 +13,21 @@ struct RecipeDetailView: View {
     var body: some View {
 		List {
 			VStack {
+
 				if let recipe = recipe.image {
 					Image(recipe)
 						.resizable()
 						.scaledToFit()
 						.frame(maxWidth: 350)
 						.clipShape(RoundedRectangle(cornerRadius: 20))
-				} else {
+				}else if let image = recipe.formImage {
+					image
+						.resizable()
+						.scaledToFit()
+						.frame(maxWidth: 350)
+						.clipShape(RoundedRectangle(cornerRadius: 20))
+				}
+				else {
 					ZStack {
 						RoundedRectangle(cornerRadius: 10)
 							.foregroundColor(.secondary)
@@ -70,7 +78,8 @@ struct RecipeDetailView: View {
 				Button(action: {
 					favoriteVM.deletOrRemoveFavorite(recipe: recipe)
 				}, label: {
-					Label("Add to favorites", systemImage: "heart.circle.fill")
+					Label("Add to favorites", systemImage: favoriteVM.favorites.contains(recipe) ? "heart.fill" : "heart")
+						.font(.title2)
 				})
 				.foregroundColor(.green)
 			}

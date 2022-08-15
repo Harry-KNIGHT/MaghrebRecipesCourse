@@ -22,6 +22,7 @@ struct RecipeFormView: View {
 	@State private var textFieldIngredients = ""
 	@State private var ingredients = [String]()
 	@State private var textfieldDescription = ""
+	@Environment(\.presentationMode) var presentationMode
 
 	var body: some View {
 		NavigationView {
@@ -56,6 +57,7 @@ struct RecipeFormView: View {
 							selectedImage
 								.resizable()
 								.frame(width: 130, height: 80)
+								.cornerRadius(10)
 						}
 
 						PhotosPicker(selection: $selectedItem) {
@@ -72,7 +74,9 @@ struct RecipeFormView: View {
 					Section {
 						TextField("4 cuisses de poulet", text: $textFieldIngredients)
 						Button(action: {
-							ingredients.insert(textFieldIngredients, at: 0)
+							if textFieldIngredients.count > 2 {
+								ingredients.insert(textFieldIngredients, at: 0)
+							}
 							textFieldIngredients = ""
 						}, label: {
 							Label( "Ingrédient", systemImage: "plus.circle.fill")
@@ -81,7 +85,7 @@ struct RecipeFormView: View {
 						.buttonStyle(.borderedProminent)
 						.tint(textFieldIngredients.count > 2 ? .blue : .gray)
 
-						if !ingredients.isEmpty && textFieldIngredients.count > 2 {
+						if !ingredients.isEmpty {
 							ForEach(ingredients, id: \.self) { ingredient in
 								Text(ingredient)
 							}
@@ -98,6 +102,7 @@ struct RecipeFormView: View {
 					ToolbarItem(placement: .navigationBarTrailing) {
 						Button(action: {
 							recipeVM.addRecipe(image: nil, formImage: recipeVM.selectedImage, name: textFieldName, recipeType: recipeTypePicker, timeToCook: timeToCook, averagePrice: averagePicker, difficulty: difficultyPicker, ingredients: ingredients, description: textfieldDescription)
+							presentationMode.wrappedValue.dismiss()
 						}, label: {
 							Text("Créer")
 								.foregroundColor(.white)

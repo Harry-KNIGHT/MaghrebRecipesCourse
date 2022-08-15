@@ -15,7 +15,7 @@ struct ContentView: View {
 					Label("Recipes", systemImage: "list.bullet.circle.fill")
 				}
 
-			RecipeFormView()
+			CreatedRecipeListView()
 				.tabItem {
 					Label("Creations", systemImage: "book.closed.circle.fill")
 			}
