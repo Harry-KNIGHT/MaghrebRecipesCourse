@@ -14,7 +14,7 @@ struct CreatedRecipeListView: View {
 		NavigationView {
 			VStack {
 				if createdRecipeVM.recipes.isEmpty {
-					EmptyView()
+					EmptyView(information: "Aucune création !")
 					Button(action: {
 						showSheet.toggle()
 					}, label: {
@@ -34,6 +34,8 @@ struct CreatedRecipeListView: View {
 								ListRowCellView(formImage: recipe.formImage, recipeName: recipe.name, recipeDescription: recipe.description)
 							}
 						}
+						.onDelete(perform: createdRecipeVM.deletCreation)
+						.onMove(perform: createdRecipeVM.moveCreation)
 					}
 				}
 			}
@@ -50,6 +52,13 @@ struct CreatedRecipeListView: View {
 						RecipeFormView()
 					}
 					.tint(.green)
+				}
+
+				ToolbarItem(placement: .navigationBarLeading) {
+					if !createdRecipeVM.recipes.isEmpty {
+						EditButton()
+							.foregroundColor(.green)
+					}
 				}
 
 			}

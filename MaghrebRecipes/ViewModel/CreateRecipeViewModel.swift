@@ -18,6 +18,14 @@ class CreateRecipeViewModel: ObservableObject {
 
 		selectedImage = .none
 	}
+
+	func deletCreation(at offset: IndexSet) {
+		self.recipes.remove(atOffsets: offset)
+	}
+
+	func moveCreation(from offset: IndexSet, to destination: Int) {
+		self.recipes.move(fromOffsets: offset, toOffset: destination)
+	}
 }
 
 

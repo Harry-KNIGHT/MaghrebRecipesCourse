@@ -23,6 +23,11 @@ struct RecipeFormView: View {
 	@State private var ingredients = [String]()
 	@State private var textfieldDescription = ""
 	@Environment(\.presentationMode) var presentationMode
+	@FocusState private var isKeyboardFocused: Bool
+
+	var isButtonDisbaled: Bool {
+		 textFieldName.count > 3
+	}
 
 	var body: some View {
 		NavigationView {
@@ -31,6 +36,9 @@ struct RecipeFormView: View {
 				Form {
 					Section {
 						TextField("Tajine Zeitoune", text: $textFieldName)
+							.focused($isKeyboardFocused)
+						TextField("45min", text: $timeToCook)
+							.focused($isKeyboardFocused)
 
 						Picker("Type de recette", selection: $recipeTypePicker) {
 							ForEach(RecipeType.allCases, id: \.self) { type in
@@ -49,30 +57,12 @@ struct RecipeFormView: View {
 								Text(difficulty.rawValue)
 							}
 						}
-						TextField("45min", text: $timeToCook)
 					}
 
-					Section {
-						if let selectedImage = recipeVM.selectedImage {
-							selectedImage
-								.resizable()
-								.frame(width: 130, height: 80)
-								.cornerRadius(10)
-						}
-
-						PhotosPicker(selection: $selectedItem) {
-							Label("Select image", systemImage: "photo.artframe")
-						}
-						.onChange(of: selectedItem) { newValue in
-							Task {
-								if let imageData = try? await newValue?.loadTransferable(type: Data.self), let image = UIImage(data: imageData) {
-									recipeVM.selectedImage = Image(uiImage: image)
-								}
-							}
-						}
-					}
 					Section {
 						TextField("4 cuisses de poulet", text: $textFieldIngredients)
+							.focused($isKeyboardFocused)
+
 						Button(action: {
 							if textFieldIngredients.count > 2 {
 								ingredients.insert(textFieldIngredients, at: 0)
@@ -94,7 +84,29 @@ struct RecipeFormView: View {
 
 					Section(header: Text("Description")) {
 						TextEditor(text: $textfieldDescription)
+							.focused($isKeyboardFocused)
+
 					}
+					Section {
+						PhotosPicker(selection: $selectedItem) {
+							Label("Select image", systemImage: "photo.artframe")
+						}
+						.onChange(of: selectedItem) { newValue in
+							Task {
+								if let imageData = try? await newValue?.loadTransferable(type: Data.self), let image = UIImage(data: imageData) {
+									recipeVM.selectedImage = Image(uiImage: image)
+								}
+							}
+						}
+						if let selectedImage = recipeVM.selectedImage {
+							selectedImage
+								.resizable()
+								.scaledToFill()
+								.frame(maxWidth: .infinity, maxHeight: .infinity)
+								.cornerRadius(10)
+						}
+					}
+
 				}
 				.navigationTitle("Créer une recette")
 				.navigationBarTitleDisplayMode(.inline)
@@ -107,8 +119,20 @@ struct RecipeFormView: View {
 							Text("Créer")
 								.foregroundColor(.white)
 						})
+						.disabled(!isButtonDisbaled)
 						.buttonStyle(.borderedProminent)
 						.foregroundColor(.green)
+					}
+
+					ToolbarItem(placement: .keyboard) {
+						Spacer()
+
+						Button(action: {
+							isKeyboardFocused.toggle()
+						}, label: {
+							Text("OK")
+								.foregroundColor(.green)
+						})
 					}
 				}
 			}

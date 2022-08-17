@@ -17,7 +17,7 @@ struct FavoritesRecipesListView: View {
 				List {
 					ForEach(favoritesVM.favorites) { favori in
 						NavigationLink(destination: RecipeDetailView(recipe: favori)) {
-							ListRowCellView(recipeImage: favori.image, formImage: nil, recipeName: favori.name, recipeDescription: favori.description)
+							ListRowCellView(recipeImage: favori.image, formImage: favori.formImage, recipeName: favori.name, recipeDescription: favori.description)
 						}
 					}
 					.onDelete(perform: favoritesVM.deletFavorite)

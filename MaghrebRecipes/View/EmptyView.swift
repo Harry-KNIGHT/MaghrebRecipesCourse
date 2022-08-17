@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct EmptyView: View {
+	var information: String = "Aucun favoris !"
     var body: some View {
 		VStack {
 			Image(systemName: "xmark.seal")
-			Text("Aucun Favoris !")
+			Text(information)
 		}
 		.font(.largeTitle)
 		.foregroundColor(.secondary)

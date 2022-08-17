@@ -17,8 +17,8 @@ struct RecipeDetailView: View {
 				if let recipe = recipe.image {
 					Image(recipe)
 						.resizable()
-						.scaledToFit()
-						.frame(maxWidth: 350)
+						.scaledToFill()
+						.frame(maxWidth: .infinity, maxHeight: .infinity)
 						.clipShape(RoundedRectangle(cornerRadius: 20))
 				}else if let image = recipe.formImage {
 					image
