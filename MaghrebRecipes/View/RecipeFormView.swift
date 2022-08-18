@@ -124,7 +124,7 @@ struct RecipeFormView: View {
 						.foregroundColor(.green)
 					}
 
-					ToolbarItem(placement: .keyboard) {
+					ToolbarItemGroup(placement: .keyboard) {
 						Spacer()
 
 						Button(action: {
