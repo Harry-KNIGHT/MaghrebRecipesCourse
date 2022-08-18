@@ -23,7 +23,7 @@ struct ContentView: View {
 				.tabItem {
 					Label("Favorites", systemImage: "heart.circle.fill")
 				}
-		}
+		}.accentColor(.green)
     }
 }
 
