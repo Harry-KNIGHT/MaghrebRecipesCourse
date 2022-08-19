@@ -1,16 +1,17 @@
 # MaghrebRecipesCourse
-GitHub of the Maghreb Recipes course app soon on Apprendre SwiftUI YouTube channel.
+GitHub du cours Maghreb Recipes que vous verrez sur la chaîne Apprendre SwiftUI
 
-You'll learn:
+Nous allons voir ensemble:
 
-- Dynamical list
-- How use MVVM pattern
-- Observable Object
-- How to make a form
-- Use @State
-- Use the brand new SwiftUI image Picker from WWDC2022
+- Liste Dynamique
+- Comment utiliser le pattern MVVM
+- Les observable object
+- Les @State 
+- Utiliser le nouvel image picker SwiftUI présenté à la WWDC 2022
 
-You can reach me at elliot@harryknight.fr
+Des notions du langage Swift sont fortement recomandées, je vous conseille de suivre la formation Swift Basics créée par Mickaël MAS: https://www.apprendre-swiftui.fr/offre-swift-basics?sa=sa0025889476017fbbabc3366b1fa16ab30f469b99
+
+Vous pouvez me contacter par mail: elliot@harryknight.fr
 
 ![RecipeListUnder](https://user-images.githubusercontent.com/63256761/185619409-e0ea352f-51f8-48ce-8410-60bb8eb8d224.png)
 
@@ -20,4 +21,4 @@ You can reach me at elliot@harryknight.fr
 
 ![FavorisIphone](https://user-images.githubusercontent.com/63256761/185621606-533102d0-8c43-484f-8676-65a59bff285c.png)
 
-Many thanks to Mickael MAS, Nyl Neuville, Maxime B, Numéro 3.
+Un grand merci à Mickael MAS, Nyl Neuville, Maxime B, Numéro 3.
