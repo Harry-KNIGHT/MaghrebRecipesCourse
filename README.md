@@ -14,8 +14,13 @@ Des notions du langage Swift sont fortement recomandées, je vous conseille de s
 Vous pouvez me contacter par mail: elliot@harryknight.fr
 
 <p float="left">
-  <img src="https://github.com/Harry-KNIGHT/MaghrebRecipesCourse/blob/main/iPhoneAppImages/MainListView.png" width="100" />
-  <img src="https://github.com/Harry-KNIGHT/MaghrebRecipesCourse/blob/main/iPhoneAppImages/TopFormiPhone.png" width="100" /> 
+  <img src="https://github.com/Harry-KNIGHT/MaghrebRecipesCourse/blob/main/iPhoneAppImages/MainListView.png" width="400" />
+  <img src="https://github.com/Harry-KNIGHT/MaghrebRecipesCourse/blob/main/iPhoneAppImages/TopFormiPhone.png" width="400" /> 
 </p>
+
+<p floar="left">
+  <img src="https://github.com/Harry-KNIGHT/MaghrebRecipesCourse/blob/main/iPhoneAppImages/FavorisIphone.png" width="400" />
+  <img src="https://github.com/Harry-KNIGHT/MaghrebRecipesCourse/blob/main/iPhoneAppImages/SwipeDeletAction.png" width="400" />
+          
 
 Un grand merci à Mickael MAS, Nyl Neuville, Maxime B, Numéro 3.
