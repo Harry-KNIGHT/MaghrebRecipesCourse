@@ -24,8 +24,10 @@ Me contacter par mail: elliot@harryknight.fr 📩
 <p floar="left">
   <img src="https://github.com/Harry-KNIGHT/MaghrebRecipesCourse/blob/main/FavorisIphone.png" width="400" />
   <img src="https://github.com/Harry-KNIGHT/MaghrebRecipesCourse/blob/main/MesCreationiPhone.png" width="400" />
-          
+</p>
 
-## Un grand merci à Mickael MAS, Nyl Neuville, Maxime Bégué, Numéro 3, JMDesigner 🚀
+[Télécharger mon application Stellar To The Moon](https://apps.apple.com/fr/app/stellar-to-the-moon/id1636548200?l=en)
+
+## Un grand merci à Mickael MAS, Nyl Neuville, Maxime Bégué, FX Meite 3️⃣, JMDesigner 🚀
 
 ### L'icone de l'app a été réalisé par J&MDesigner, vous pouvez le contacter sur Instagram: [J&M Instragram](https://www.instagram.com/jmdesignerofficiel/?hl=fr/).
