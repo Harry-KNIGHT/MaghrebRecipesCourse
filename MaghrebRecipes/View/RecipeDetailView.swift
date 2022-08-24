@@ -10,6 +10,7 @@ import SwiftUI
 struct RecipeDetailView: View {
 	let recipe: RecipeModel
 	@EnvironmentObject public var favoriteVM: FavoriteViewModel
+	@EnvironmentObject public var recipeVM: CreateRecipeViewModel
     var body: some View {
 		List {
 			VStack {
@@ -74,7 +75,7 @@ struct RecipeDetailView: View {
 		.listStyle(.plain)
 
 		.toolbar {
-			ToolbarItem(placement: .navigationBarTrailing) {
+			ToolbarItemGroup(placement: .navigationBarTrailing) {
 				Button(action: {
 					favoriteVM.deletOrRemoveFavorite(recipe: recipe)
 				}, label: {
@@ -82,6 +83,13 @@ struct RecipeDetailView: View {
 						.font(.title2)
 				})
 				.foregroundColor(.green)
+				Button(action: {
+					recipeVM.isEditing.toggle()
+				}, label: {
+					Text("Edit")
+				}).sheet(isPresented: $recipeVM.isEditing) {
+					RecipeFormView()
+				}
 			}
 		}
 
@@ -94,6 +102,7 @@ struct RecipeDetailView_Previews: PreviewProvider {
 		NavigationView {
 			RecipeDetailView(recipe: .recipeSample)
 				.environmentObject(FavoriteViewModel())
+				.environmentObject(CreateRecipeViewModel())
 		}
     }
 }

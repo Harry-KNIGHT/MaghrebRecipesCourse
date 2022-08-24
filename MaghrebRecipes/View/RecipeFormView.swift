@@ -114,6 +114,7 @@ struct RecipeFormView: View {
 					ToolbarItem(placement: .navigationBarTrailing) {
 						Button(action: {
 							recipeVM.addRecipe(image: nil, formImage: recipeVM.selectedImage, name: textFieldName, recipeType: recipeTypePicker, timeToCook: timeToCook, averagePrice: averagePicker, difficulty: difficultyPicker, ingredients: ingredients, description: textfieldDescription)
+							self.recipeVM.isEditing.toggle()
 							presentationMode.wrappedValue.dismiss()
 						}, label: {
 							Text("Créer")
