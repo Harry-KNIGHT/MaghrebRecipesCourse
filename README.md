@@ -1,4 +1,4 @@
-# Maghreb Recipes cours
+<img src="https://github.com/Harry-KNIGHT/ImageGifVideoForReadme/blob/main/Images/logo%20Maghreb%20Recipes%20cours%20%28black%29.png" height: "500" />
 
 GitHub du cours Maghreb Recipes que vous verrez sur la [chaîne Apprendre SwiftUI](https://www.youtube.com/channel/UCDZEaR8JMy-Y5KYgPwjOgxQ/).
 
