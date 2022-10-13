@@ -14,7 +14,7 @@ Nous allons voir ensemble:
 
 Coaching pour accélerer votre apprentissage iOS avec Mickael MAS: [Coaching Privé](https://www.apprendre-swiftui.fr/coaching/).
 
-Me contacter par mail: elliot@harryknight.fr 📩
+Me contacter par mail: elliot.knight@appiwedia.com 📩
 
 <p float="left">
   <img src="https://github.com/Harry-KNIGHT/MaghrebRecipesCourse/blob/main/MainListiPhone.png" width="400" />
